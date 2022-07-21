@@ -1,0 +1,132 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>OpenGAN: Open-Set Recognition via Open Data Generation</title>
+<link rel="icon" href="./OpenGAN_files/OpenGAN_icon.png" type="img/jpg">
+<style>
+h1 { padding : 0; margin : 0; }
+body { padding : 0; font-family : Arial; font-size : 16px; background-color : #EFEFEF; } /* background-image : url('bg.png');}*/
+#container { width : 1024px; margin : 20px auto;  background-color : #fff; padding : 50px; border : 1px solid #ccc; }
+#me { border : 0 solid black; margin-bottom : 0;}
+#sidebar { margin-left : 25px; border : 0 solid black; float : right; margin-bottom : 0;}
+#content { display : block; margin-right : 260px;}
+a { text-decoration : none; }
+a:hover { text-decoration : underline; }
+a:visited { color : blue; }
+a.invisible { color : inherit; text-decoration : inherit; }
+.publogo { margin-right : 10px; height: 50px; width: 50px; float : left; border : 0;}
+.publication { clear : left; padding-bottom : 0px;}
+.publication p { height : 60px; }
+.codelogo { margin-right : 10px; float : left; border : 0;}
+.code { clear : left; padding-bottom : 10px; vertical-align :middle;}
+.code .download a { display : block; margin : 0 15px; float : left;}
+<!-- #simpsons { margin : 5px auto; text-align : center; color : #B7B7B7; } -->
+<!-- 	#erdos { color : #999; text-align : center; font-size : 12px; } -->
+</style>
+
+</head>
+
+<body>
+<div id="container">
+<div id="sidebar">
+<!--figure>
+<img src="./OpenGAN_files/OpenGAN_small.png" id="me" width="400">
+</figure-->
+<br>
+</div>
+
+<div id="content">
+<h1 align="center">OpenGAN: Open-Set Recognition via Open Data Generation</h1>
+
+
+<p align="center">
+          <a href="http://www.cs.cmu.edu/~shuk/" target="_blank">Shu Kong</a>   &nbsp;&nbsp;&nbsp; 
+          <a href="http://www.cs.cmu.edu/~deva/" target="_blank">Deva Ramanan</a>
+</p>
+
+<p align="center">
+              <img src="./OpenGAN_files/cmu_logo.png" alt="[lng_lat_ecef]" width="100"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="./OpenGAN_files/argo_logo.png" alt="[lng_lat_ecef]" width="100">
+</p>
+
+
+<br><br>
+
+
+<section>
+<div id="content">
+            <center>
+              <img src="./OpenGAN_files/OpenGAN_logo.png" alt="[lng_lat_ecef]" width="800">
+            </center>
+</div>
+</section>
+
+<br><br>
+
+
+<b>Abstract.</b>
+Real-world machine learning systems need to analyze test data that may differ from training data. In K-way classification, this is crisply formulated as open-set recognition, core to which is the ability to discriminate open-set data outside the K closed-set classes. Two conceptually elegant ideas for open-set discrimination are: 1) discriminatively learning an open-vs-closed binary discriminator by exploiting  some outlier data as the open-set, and 2) unsupervised learning the closed-set data distribution with a GAN,  using its discriminator as the open-set likelihood function. However, the former generalizes poorly to diverse open test data due to overfitting to the training outliers, which are unlikely to exhaustively span the open-world. The latter does not work well, presumably due to the instable training of GANs. Motivated by the above, we propose OpenGAN, which addresses the limitation of each approach by combining them with several technical insights. First, we show that a carefully selected GAN-discriminator on some real outlier data already achieves the state-of-the-art. Second, we augment the available set of real open training examples with adversarially synthesized ``fake'' data. 
+Third and most importantly, we build the discriminator over the features computed by the closed-world K-way networks. This allows OpenGAN to be implemented via a lightweight discriminator head built on top of an existing K-way network.
+Extensive experiments show that OpenGAN significantly outperforms prior open-set methods.
+
+
+ <br> <br> 
+
+</p><h3>12min Talk</h3>
+<iframe width="700" height="500" src="https://www.youtube.com/embed/CNYqYXyUHn0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ <br> <br> 
+
+<p>
+<b>keywords.</b>
+Open-Set Recognition, Open-World, Generative Adversarial Networks, Semantic Segmentation
+</p>
+
+
+
+<br>
+<h3>Paper</h3>
+<ul>
+<div class="publication">
+<p>Shu Kong, Deva Ramanan, "<font color="#AF7817">OpenGAN: Open-Set Recognition via Open Data Generation</font>", <em>International Conference on Computer Vision (ICCV)</em>, 2021.
+<br>
+[<a href="https://arxiv.org/abs/2104.02939">paper</a>]
+[<a href="https://github.com/aimerykong/OpenGAN">github</a>]
+[<a href="./img/OpenGAN_poster.pdf">poster</a>]
+[<a href="./img/OpenGAN_slides.pdf">slides</a>]
+[<a href="https://youtu.be/CNYqYXyUHn0">watch 12min video presentation</a>]
+<br>
+honorable mention for <font color=ff3399>Best Paper / Marr Prize</font>
+</p>
+</div>
+</ul>
+
+<br>
+
+<p>
+<h3>Acknowledgement</h3>
+This work was supported by the <a href="https://labs.ri.cmu.edu/argo-ai-center">CMU Argo AI Center for Autonomous Vehicle Research</a>
+
+<br><br>
+<p>
+<h3>Useful Links</h3>
+Open-set recognition deals with unknown examples encountered in the real open world. If you are interested in solving issues related to the open-world, you might find the workshops below interesting.
+<ul>
+<li>
+<a href="http://vplow.github.io/vplow.html">Visual Perception and Learning in an Open World (VPLOW)</a>, CVPR'22</li>
+</li>
+<li>
+<a href="http://vplow.github.io/open-world-vision.html">Open-World Vision</a>, CVPR'21
+</li>
+
+<li>
+<a href="https://www.cs.umd.edu/~pulkit/DNOW_workshop">Dealing with the Novelty in Open Worlds (DNOW)</a>, WACV'22</li>
+</ul>
+
+
+</div>
+</div>
+
+
+
+
+
+</body></html>
